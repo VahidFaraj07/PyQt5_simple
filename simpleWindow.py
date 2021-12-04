@@ -6,8 +6,12 @@ class Window(QWidget):
     def __init__(self):
         super().__init__()
         self.setGeometry(150, 250, 500, 350)
-        self.setWindowTitle('pyqt5 app')
+        self.setWindowTitle('Empty window Example')
+        self.UI()
         self.show()
+    
+    def UI(self):
+        pass
 
 App = QApplication(sys.argv)
 window = Window()
