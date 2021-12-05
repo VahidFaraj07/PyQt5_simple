@@ -17,10 +17,10 @@ class Window(QWidget):
         self.editor.resize(480, 100)
 
         button = QPushButton("Save", self)
-        button.clicked.connect(self.writeToFile)
+        button.clicked.connect(self.handling)
         button.move(220, 300)
 
-    def writeToFile(self):
+    def handling(self):
         textEditData = str(self.editor.toPlainText())
         message = QMessageBox.information(self, "Your input", textEditData)
 
