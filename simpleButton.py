@@ -8,6 +8,7 @@ class Window(QWidget):
         self.setGeometry(200, 300, 500, 400)
         self.setWindowTitle('Button Example')
         self.UI()
+        self.show()
 
     def UI(self):
         self.text = QLabel('Choose your way', self)
@@ -22,7 +23,7 @@ class Window(QWidget):
 
         enterButton.clicked.connect(self.enterFunc)
         exitButton.clicked.connect(self.exitFunc)
-        self.show()
+        
 
     def enterFunc(self):
         self.text.setText("You clicked Enter")
