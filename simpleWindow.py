@@ -13,6 +13,11 @@ class Window(QWidget):
     def UI(self):
         pass
 
-App = QApplication(sys.argv)
-window = Window()
-sys.exit(App.exec())
+
+def main():
+    App = QApplication(sys.argv)
+    window = Window()
+    sys.exit(App.exec_())
+
+if __name__ == '__main__':
+    main()

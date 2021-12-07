@@ -39,6 +39,10 @@ class Window(QWidget):
         print(f"name - {name}\nsurname - {surname}\ngender - {gender}")
 
 
-App = QApplication(sys.argv)
-window = Window()
-sys.exit(App.exec())
+def main():
+    App = QApplication(sys.argv)
+    window = Window()
+    sys.exit(App.exec_())
+
+if __name__ == '__main__':
+    main()

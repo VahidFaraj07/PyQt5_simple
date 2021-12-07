@@ -31,9 +31,13 @@ class Window(QWidget):
         self.image.show()
 
 
-App = QApplication(sys.argv)
-window = Window()
-sys.exit(App.exec())
+def main():
+    App = QApplication(sys.argv)
+    window = Window()
+    sys.exit(App.exec_())
+
+if __name__ == '__main__':
+    main()
 
 
 # image direcotory D:/23/Images/xy/

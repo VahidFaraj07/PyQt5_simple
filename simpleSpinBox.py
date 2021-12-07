@@ -40,6 +40,10 @@ class Window(QWidget):
     def ballPosition(self):
         self.ball1.move(self.spin_box1.value(), self.spin_box2.value())
 
-App = QApplication(sys.argv)
-window = Window()
-sys.exit(App.exec())
+def main():
+    App = QApplication(sys.argv)
+    window = Window()
+    sys.exit(App.exec_())
+
+if __name__ == '__main__':
+    main()
