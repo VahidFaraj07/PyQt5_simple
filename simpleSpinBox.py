@@ -5,6 +5,7 @@ from PyQt5.QtGui import QFont
 
 myFont1 = QFont("Boardway", 16)
 
+
 class Window(QWidget):
     def __init__(self):
         super().__init__()
@@ -40,10 +41,12 @@ class Window(QWidget):
     def ballPosition(self):
         self.ball1.move(self.spin_box1.value(), self.spin_box2.value())
 
+
 def main():
     App = QApplication(sys.argv)
     window = Window()
     sys.exit(App.exec_())
+
 
 if __name__ == '__main__':
     main()
