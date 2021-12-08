@@ -14,26 +14,23 @@ class Window(QWidget):
         self.usernameTextBox = QLineEdit(self)
         self.passTextBox = QLineEdit(self)
 
-        self.usernameTextBox.move(50,50)
-        self.passTextBox.move(50,100)
+        self.usernameTextBox.move(50, 50)
+        self.passTextBox.move(50, 100)
 
         self.usernameTextBox.setPlaceholderText("Enter username")
         self.passTextBox.setPlaceholderText("Enter password")
 
-        # for hide password 
+        # for hide password
         self.passTextBox.setEchoMode(QLineEdit.Password)
 
-        saveButton = QPushButton("Save",self)
-        saveButton.move(230,100)
+        saveButton = QPushButton("Save", self)
+        saveButton.move(230, 100)
         saveButton.clicked.connect(self.getValues)
-
 
     def getValues(self):
         username = self.usernameTextBox.text()
         password = self.passTextBox.text()
-
         print(f"username: {username} and password: {password}")
-
 
 
 def main():
