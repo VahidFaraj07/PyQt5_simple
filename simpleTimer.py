@@ -14,24 +14,27 @@ class Window(QWidget):
     def UI(self):
         self.emptyTextLabel = QLabel(self)
         self.emptyTextLabel.resize(200, 300)
-        self.emptyTextLabel.setStyleSheet("background-color:green")
+        self.emptyTextLabel.setStyleSheet("background-color:red")
         self.emptyTextLabel.move(10, 10)
 
         startButton = QPushButton("Start", self)
         stopButton = QPushButton("Stop", self)
-        startButton.move(10, 320)
-        stopButton.move(100, 320)
+        startButton.move(250, 150)
+        stopButton.move(350, 150)
         startButton.clicked.connect(self.start)
         startButton.clicked.connect(self.stop)
 
+
+        self.time
         self.myTimer = QTimer()
-        self.myTimer.setInterval(100)
+        self.myTimer.setInterval(10)
         self.myTimer.timeout.connect(self.changeColor)
-        self.value = 1
+        self.value = 0
+        
 
     def changeColor(self):
         if self.value == 0:
-            self.emptyTextLabel.setStyleSheet("background-color:red")
+            self.emptyTextLabel.setStyleSheet("background-color:green")
             self.value = 1
         else:
             self.emptyTextLabel.setStyleSheet("background-color:yellow")
