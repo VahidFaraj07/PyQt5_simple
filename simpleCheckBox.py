@@ -20,25 +20,27 @@ class Window(QWidget):
         self.name.setPlaceholderText("Enter your name")
         self.surname.setPlaceholderText("Enter your surname")
 
-        self.remember =QCheckBox("Remember me", self)
-        self.remember.move(10,70)
+        self.remember = QCheckBox("Remember me", self)
+        self.remember.move(10, 70)
 
         submitButton = QPushButton("Submit", self)
         submitButton.move(10, 100)
         submitButton.clicked.connect(self.submit)
 
-
     def submit(self):
         if(self.remember.isChecked()):
-            print(f"name: {self.name.text()}\nsurname: {self.surname.text()}\nRemember me is checked")
+            print(
+                f"name: {self.name.text()}\nsurname: {self.surname.text()}\nRemember me is checked")
         else:
-            print(f"name: {self.name.text()}\nsurname: {self.surname.text()}\nRemember me is not checked")
+            print(
+                f"name: {self.name.text()}\nsurname: {self.surname.text()}\nRemember me is not checked")
 
 
 def main():
     App = QApplication(sys.argv)
     window = Window()
     sys.exit(App.exec_())
+
 
 if __name__ == '__main__':
     main()
