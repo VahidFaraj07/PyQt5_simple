@@ -1,6 +1,7 @@
 from PyQt5.QtWidgets import *
 import sys
 
+
 class Window(QWidget):
     def __init__(self):
         super().__init__()
@@ -20,19 +21,21 @@ class Window(QWidget):
 
         enterButton.clicked.connect(self.enterFunc)
         exitButton.clicked.connect(self.exitFunc)
-        
+
     def enterFunc(self):
         self.text.setText("You clicked Enter")
-        self.text.resize(250,300)
+        self.text.resize(250, 300)
 
     def exitFunc(self):
         self.text.setText("You clicked Exit")
-        self.text.resize(250,300)     
+        self.text.resize(250, 300)
+
 
 def main():
     App = QApplication(sys.argv)
     window = Window()
     sys.exit(App.exec_())
+
 
 if __name__ == '__main__':
     main()
