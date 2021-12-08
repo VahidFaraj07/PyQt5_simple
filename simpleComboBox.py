@@ -9,9 +9,7 @@ class Window(QWidget):
         self.setWindowTitle('Empty window Example')
         self.UI()
         self.show()
-    
-    
-
+        
     def UI(self):
         self.text1 = QLabel('Where do you live?', self)
         self.combo1 = QComboBox(self)
@@ -30,8 +28,6 @@ class Window(QWidget):
 
     def getValue(self):
         print(f"You live in {self.combo1.currentText()}") 
-
-
 
 def main():
     App = QApplication(sys.argv)
