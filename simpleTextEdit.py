@@ -30,5 +30,6 @@ def main():
     window = Window()
     sys.exit(App.exec_())
 
+
 if __name__ == '__main__':
     main()
